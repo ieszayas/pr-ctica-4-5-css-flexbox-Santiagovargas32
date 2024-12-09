@@ -1,0 +1,107 @@
+/* Estilo global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: grey;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+/* Header */
+.header {
+    background-color: #f3e7b5;
+    text-align: center;
+    padding: 20px;
+    flex: 0 0 auto;
+}
+
+/* Contenedor principal */
+.main {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    justify-content: space-between;
+    
+}
+
+/* Navegación */
+.nav {
+    background-color: #c2b6ee;
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Artículo */
+.article {
+    background-color: #e0d89d;
+    padding: 20px;
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Barra lateral */
+.aside {
+    background-color: #c2b6ee;
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Footer */
+.footer {
+    background-color: #f3e7b5;
+    text-align: center;
+    padding: 20px;
+    flex: 0 0 auto;
+}
+
+/* Diseño responsivo */
+@media (max-width: 640px) {
+    .container {
+        flex-wrap: wrap; /* Permite que los elementos se acomoden horizontalmente */
+        flex-direction: column; /* Ordena las cajas en filas horizontales */
+    }
+
+    .header {
+        order: 1;
+       
+    }
+
+    .article {
+        order: 2;
+
+    }
+
+    .aside {
+        order: 3;
+        
+    }
+
+    .nav {
+        order: 4;
+
+    }
+
+    .footer {
+        order: 5;
+
+    }
+}
