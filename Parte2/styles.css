@@ -14,6 +14,11 @@ body {
 
 img {
     margin: 10px;
+    width: 100%; /* Las imágenes ocupan el 100% del contenedor que las envuelve */
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Transición suave */
 }
 
 /* Estilo para el contenedor de la galería */
@@ -32,32 +37,20 @@ img {
     margin-top: 20px;
     width: 80%;
     /* Ancho del contenedor */
+    flex-wrap: wrap; /* Permite que las imágenes se envuelvan */
+    gap: 20px; /* Espaciado entre las imágenes */
 }
 
 /* Estilo para las imágenes */
-.image img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-    object-fit: cover;
-    margin: 20px;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    /* Transición suave */
+.image {
+    /* No cambiamos el tamaño de las imágenes aquí */
+    margin: 10px;
 }
 
 /* Efecto hover para las imágenes */
 .image img:hover {
-    transform: scale(1.1);
-    /* Aumenta el tamaño de la imagen un 10% */
-    opacity: 0.8;
-    /* Reduce ligeramente la opacidad de la imagen */
-}
-
-/* Diseño de imagen: márgenes entre las imágenes */
-.image {
-    width: 30%;
-    margin: 25px 25px;
-    /* Márgenes entre las imágenes */
+    transform: scale(1.1); /* Aumenta el tamaño de la imagen un 10% */
+    opacity: 0.8; /* Reduce ligeramente la opacidad de la imagen */
 }
 
 /* Adaptación para pantallas más pequeñas (móvil) */
@@ -69,14 +62,12 @@ img {
     }
 
     .image {
-        width: 80%;
-        /* Las imágenes ocupan el 80% del contenedor */
+        width: 80%; /* Las imágenes ocupan el 80% del contenedor */
         margin-bottom: 15px;
-        margin: 25px;
     }
 }
 
-/* Adaptación para pantallas medianas (de 871px a 940px) */
+/* Adaptación para pantallas medianas (de 671px a 940px) */
 @media (min-width: 671px) and (max-width: 940px) {
     .image-container {
         display: flex;
@@ -87,8 +78,7 @@ img {
     }
 
     .image {
-        width: 45%;
-        /* Las imágenes ocupan el 45% */
+        width: 45%; /* Las imágenes ocupan el 45% del contenedor (dos por fila) */
         margin: 25px;
         margin-bottom: 15px;
         /* Espaciado entre las filas */
@@ -104,8 +94,7 @@ img {
     }
 
     .image {
-        width: 30%;
-        /* Las imágenes ocupan el 30% */
+        width: 22%; /* Las imágenes ocupan el 22% para 4 imágenes por fila */
         margin: 25px;
     }
 }
@@ -119,8 +108,7 @@ img {
     }
 
     .image {
-        width: 30%;
-        /* Las imágenes ocupan el 30% */
+        width: 22%; /* Las imágenes ocupan el 22% para 4 imágenes por fila */
         margin: 25px;
     }
 }
