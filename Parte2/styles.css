@@ -12,7 +12,7 @@ body {
     background-color: #f4f4f4;
 }
 
-img{
+img {
     margin: 10px;
 }
 
@@ -30,7 +30,10 @@ img{
     justify-content: space-between;
     margin-bottom: 20px;
     margin-top: 20px;
-    width: 80%; /* Ancho del contenedor */
+    width: 80%;
+    border-color: red;
+    border-style: solid;
+    /* Ancho del contenedor */
 }
 
 /* Estilo para las imágenes */
@@ -45,7 +48,8 @@ img{
 /* Diseño de imagen: márgenes entre las imágenes */
 .image {
     width: 30%;
-    margin: 25px 25px; /* Márgenes entre las imágenes */
+    margin: 25px 25px;
+    /* Márgenes entre las imágenes */
 }
 
 /* Adaptación para pantallas más pequeñas (móvil) */
@@ -53,54 +57,62 @@ img{
     .image-container {
         flex-direction: column;
         align-items: center;
-        margin:25px;
-    }
-
-    .image {
-        width: 80%; /* Las imágenes ocupan el 80% del contenedor */
-        margin-bottom: 15px;
-        margin:25px;
-    }
-}
-
-/* Adaptación para pantallas de tabletas (de 641px a 940px) */
-@media (min-width: 641px) and (max-width: 940px) {
-    .image-container {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap; /* Permite que las imágenes se envuelvan a la siguiente fila */
         margin: 25px;
     }
 
     .image {
-        width: 45%; /* Las imágenes ocupan el 45% */
-        margin: 25px; /* Espaciado entre las imágenes */
-        margin-bottom: 15px; /* Espaciado entre las filas */
+        width: 80%;
+        /* Las imágenes ocupan el 80% del contenedor */
+        margin-bottom: 15px;
+        margin: 25px;
     }
 }
 
-/* Adaptación para pantallas de escritorio y panorámicas */
-@media (min-width: 940px) {
+/* Adaptación para pantallas medianas (de 641px a 940px) */
+@media (min-width: 641px) and (max-width: 940px) {
     .image-container {
-        justify-content: space-between;
-        margin:25px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        /* Permite que las imágenes se envuelvan a la siguiente fila */
+        margin: 25px;
     }
 
     .image {
-        margin:25px;
-        width: 30%; /* Las imágenes ocupan el 30% */
+        width: 45%;
+        /* Las imágenes ocupan el 45% */
+        margin: 25px;
+        margin-bottom: 15px;
+        /* Espaciado entre las filas */
     }
 }
 
-/* Adaptación para pantallas grandes */
-@media (min-width: 1025px) {
+/* Adaptación para pantallas grandes (de 941px a 1080px) */
+@media(min-width: 941px) and (max-width: 1280px) {
     .image-container {
+        display: flex;
         justify-content: space-between;
-        margin:25px;
+        margin: 25px;
     }
 
     .image {
-        margin:25px;
-        width: 30%; /* Las imágenes ocupan el 30% */
+        width: 30%;
+        /* Las imágenes ocupan el 30% */
+        margin: 25px;
+    }
+}
+
+/* Pantallas muy grandes (mayores de 1280px) */
+@media (min-width: 1281px) {
+    .image-container {
+        display: flex;
+        justify-content: space-between;
+        margin: 25px;
+    }
+
+    .image {
+        width: 30%;
+        /* Las imágenes ocupan el 30% */
+        margin: 25px;
     }
 }
