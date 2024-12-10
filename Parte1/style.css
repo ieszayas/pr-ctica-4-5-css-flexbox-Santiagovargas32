@@ -1,107 +1,136 @@
-/* Estilo global */
+/* Reset y configuraciones generales */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body, html {
-    height: 100%;
+body {
     font-family: Arial, sans-serif;
+    height: 100vh;
+    /* Altura total de la pantalla */
+    display: flex;
+    flex-direction: column;
     background-color: grey;
 }
 
 .container {
     display: flex;
     flex-direction: column;
+    /* Por defecto en columna */
     height: 100%;
-    width: 100%;
+    /* Ocupa toda la pantalla */
 }
 
-/* Header */
+/* Estilos de las cajas */
+.container>div {
+    text-align: center;
+    color: white;
+}
+
+/* Colores específicos para cada sección */
 .header {
-    background-color: #f3e7b5;
-    text-align: center;
-    padding: 20px;
-    flex: 0 0 auto;
+    background-color: #f4b400;
+    /* Amarillo */
 }
 
-/* Contenedor principal */
-.main {
-    display: flex;
-    flex: 1;
-    width: 100%;
-    justify-content: space-between;
-    
-}
-
-/* Navegación */
-.nav {
-    background-color: #c2b6ee;
-    padding: 20px;
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Artículo */
 .article {
-    background-color: #e0d89d;
-    padding: 20px;
-    flex: 2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-color: #bd18a1;
+    /* Verde claro */
 }
 
-/* Barra lateral */
+.nav {
+    background-color: #9fa8da;
+    /* Azul claro */
+}
+
 .aside {
-    background-color: #c2b6ee;
-    padding: 20px;
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-color: #9fa8da;
+    /* Azul claro */
 }
 
-/* Footer */
 .footer {
-    background-color: #f3e7b5;
-    text-align: center;
-    padding: 20px;
-    flex: 0 0 auto;
+    background-color: #b31717;
+    /* Amarillo */
 }
 
-/* Diseño responsivo */
-@media (max-width: 640px) {
+/* Diseño para pantallas grandes (más de 640px) */
+@media (min-width: 640px) {
     .container {
-        flex-wrap: wrap; /* Permite que los elementos se acomoden horizontalmente */
-        flex-direction: column; /* Ordena las cajas en filas horizontales */
+        flex-direction: column;
     }
 
     .header {
-        order: 1;
-       
+        flex: 0 0 auto;
+        /* Header siempre arriba */
+        height: 45px;
+    }
+
+    .main {
+        display: flex;
+        flex: 1;
+        height: auto;
+        /* Asegura altura automática */
+    }
+
+    .nav {
+        flex: 0 0 15%;
+        /* Nav ocupa el 15% */
+    }
+
+    .article {
+        flex: 0 0 70%;
+        /* Article ocupa el 70% */
+    }
+
+    .aside {
+        flex: 0 0 15%;
+        /* Aside ocupa el 15% */
+    }
+
+    .footer {
+        flex: 0 0 auto;
+        /* Footer siempre abajo */
+        height: 45px;
+    }
+}
+
+/* Diseño para pantallas pequeñas (menos de 640px) */
+@media (max-width: 639px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .header {
+        flex: 0 0 auto;
+        /* Header siempre arriba */
+        height: 10%;
+    }
+
+    .main {
+        display:inline;
+        flex: 1;
+        height: auto;
+        /* Asegura altura automática */
     }
 
     .article {
         order: 2;
-
-    }
-
-    .aside {
-        order: 3;
-        
+        height:90%;
     }
 
     .nav {
-        order: 4;
+        order: 3;
+        height: 5%;
+    }
 
+    .aside {
+        order: 4;
+        height: 5%;
     }
 
     .footer {
         order: 5;
-
+        height: 10%;
     }
 }
