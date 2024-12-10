@@ -35,15 +35,14 @@ img {
     justify-content: space-between;
     margin-bottom: 20px;
     margin-top: 20px;
-    width: 80%;
+    width: 100%;
     /* Ancho del contenedor */
     flex-wrap: wrap; /* Permite que las imágenes se envuelvan */
-    gap: 20px; /* Espaciado entre las imágenes */
+   
 }
 
 /* Estilo para las imágenes */
 .image {
-    /* No cambiamos el tamaño de las imágenes aquí */
     margin: 10px;
 }
 
