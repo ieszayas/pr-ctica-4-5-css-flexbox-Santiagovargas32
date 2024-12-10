@@ -31,8 +31,6 @@ img {
     margin-bottom: 20px;
     margin-top: 20px;
     width: 80%;
-    border-color: red;
-    border-style: solid;
     /* Ancho del contenedor */
 }
 
@@ -53,7 +51,7 @@ img {
 }
 
 /* Adaptación para pantallas más pequeñas (móvil) */
-@media (max-width: 640px) {
+@media (max-width: 870px) {
     .image-container {
         flex-direction: column;
         align-items: center;
@@ -68,8 +66,8 @@ img {
     }
 }
 
-/* Adaptación para pantallas medianas (de 641px a 940px) */
-@media (min-width: 641px) and (max-width: 940px) {
+/* Adaptación para pantallas medianas (de 871px a 940px) */
+@media (min-width: 871px) and (max-width: 940px) {
     .image-container {
         display: flex;
         justify-content: center;
@@ -87,7 +85,7 @@ img {
     }
 }
 
-/* Adaptación para pantallas grandes (de 941px a 1080px) */
+/* Adaptación para pantallas grandes (de 941px a 1280px) */
 @media(min-width: 941px) and (max-width: 1280px) {
     .image-container {
         display: flex;
