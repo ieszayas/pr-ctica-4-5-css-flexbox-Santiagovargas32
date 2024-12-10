@@ -12,6 +12,10 @@ body {
     background-color: #f4f4f4;
 }
 
+img{
+    margin: 10px;
+}
+
 /* Estilo para el contenedor de la galería */
 .gallery {
     display: flex;
@@ -25,6 +29,7 @@ body {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
+    margin-top: 20px;
     width: 80%; /* Ancho del contenedor */
 }
 
@@ -34,12 +39,13 @@ body {
     height: auto;
     border-radius: 5px;
     object-fit: cover;
+    margin: 20px;
 }
 
 /* Diseño de imagen: márgenes entre las imágenes */
 .image {
     width: 30%;
-    margin: 0 25px; /* Márgenes entre las imágenes */
+    margin: 25px 25px; /* Márgenes entre las imágenes */
 }
 
 /* Adaptación para pantallas más pequeñas (móvil) */
@@ -47,23 +53,29 @@ body {
     .image-container {
         flex-direction: column;
         align-items: center;
+        margin:25px;
     }
 
     .image {
         width: 80%; /* Las imágenes ocupan el 80% del contenedor */
         margin-bottom: 15px;
+        margin:25px;
     }
 }
 
-/* Adaptación para pantallas de tabletas */
+/* Adaptación para pantallas de tabletas (de 641px a 940px) */
 @media (min-width: 641px) and (max-width: 940px) {
     .image-container {
-        justify-content: space-around;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap; /* Permite que las imágenes se envuelvan a la siguiente fila */
+        margin: 25px;
     }
 
     .image {
         width: 45%; /* Las imágenes ocupan el 45% */
-        margin-bottom: 15px;
+        margin: 25px; /* Espaciado entre las imágenes */
+        margin-bottom: 15px; /* Espaciado entre las filas */
     }
 }
 
@@ -71,9 +83,11 @@ body {
 @media (min-width: 940px) {
     .image-container {
         justify-content: space-between;
+        margin:25px;
     }
 
     .image {
+        margin:25px;
         width: 30%; /* Las imágenes ocupan el 30% */
     }
 }
@@ -82,9 +96,11 @@ body {
 @media (min-width: 1025px) {
     .image-container {
         justify-content: space-between;
+        margin:25px;
     }
 
     .image {
+        margin:25px;
         width: 30%; /* Las imágenes ocupan el 30% */
     }
 }
