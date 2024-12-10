@@ -13,7 +13,7 @@ body {
 }
 
 img {
-    margin: 10px;
+    margin: 5px; /* Reducir el margen de las imágenes */
     width: 100%; /* Las imágenes ocupan el 100% del contenedor que las envuelve */
     height: auto;
     border-radius: 5px;
@@ -33,17 +33,18 @@ img {
 .image-container {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    width: 100%;
+    margin-bottom: 10px; /* Reducir el espacio entre las filas */
+    margin-top: 10px; /* Reducir el espacio entre las filas */
+    width: 80%;
     /* Ancho del contenedor */
     flex-wrap: wrap; /* Permite que las imágenes se envuelvan */
-   
+    gap: 10px; /* Reducir el espaciado entre las imágenes */
 }
 
 /* Estilo para las imágenes */
 .image {
-    margin: 10px;
+    /* No cambiamos el tamaño de las imágenes aquí */
+    margin: 5px; /* Reducir el margen entre las imágenes dentro de su div */
 }
 
 /* Efecto hover para las imágenes */
@@ -57,12 +58,12 @@ img {
     .image-container {
         flex-direction: column;
         align-items: center;
-        margin: 25px;
+        margin: 10px; /* Reducir el margen alrededor del contenedor */
     }
 
     .image {
         width: 80%; /* Las imágenes ocupan el 80% del contenedor */
-        margin-bottom: 15px;
+        margin-bottom: 10px; /* Reducir el margen entre las imágenes */
     }
 }
 
@@ -73,14 +74,12 @@ img {
         justify-content: center;
         flex-wrap: wrap;
         /* Permite que las imágenes se envuelvan a la siguiente fila */
-        margin: 25px;
+        margin: 10px; /* Reducir el margen alrededor del contenedor */
     }
 
     .image {
         width: 45%; /* Las imágenes ocupan el 45% del contenedor (dos por fila) */
-        margin: 25px;
-        margin-bottom: 15px;
-        /* Espaciado entre las filas */
+        margin: 5px; /* Reducir el margen entre las imágenes */
     }
 }
 
@@ -89,12 +88,12 @@ img {
     .image-container {
         display: flex;
         justify-content: space-between;
-        margin: 25px;
+        margin: 10px; /* Reducir el margen alrededor del contenedor */
     }
 
     .image {
         width: 22%; /* Las imágenes ocupan el 22% para 4 imágenes por fila */
-        margin: 25px;
+        margin: 5px; /* Reducir el margen entre las imágenes */
     }
 }
 
@@ -103,11 +102,11 @@ img {
     .image-container {
         display: flex;
         justify-content: space-between;
-        margin: 25px;
+        margin: 10px; /* Reducir el margen alrededor del contenedor */
     }
 
     .image {
         width: 22%; /* Las imágenes ocupan el 22% para 4 imágenes por fila */
-        margin: 25px;
+        margin: 5px; /* Reducir el margen entre las imágenes */
     }
 }
