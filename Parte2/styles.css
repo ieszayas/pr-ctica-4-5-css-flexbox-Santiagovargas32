@@ -1,0 +1,90 @@
+/* Reset para evitar márgenes y paddings por defecto */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: grey;
+}
+
+/* Estilos generales del cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Estilo para el contenedor de la galería */
+.gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+/* Contenedor para cada fila de imágenes */
+.image-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    width: 80%; /* Ancho del contenedor */
+}
+
+/* Estilo para las imágenes */
+.image img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+/* Diseño de imagen: márgenes entre las imágenes */
+.image {
+    width: 30%;
+    margin: 0 25px; /* Márgenes entre las imágenes */
+}
+
+/* Adaptación para pantallas más pequeñas (móvil) */
+@media (max-width: 640px) {
+    .image-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image {
+        width: 80%; /* Las imágenes ocupan el 80% del contenedor */
+        margin-bottom: 15px;
+    }
+}
+
+/* Adaptación para pantallas de tabletas */
+@media (min-width: 641px) and (max-width: 940px) {
+    .image-container {
+        justify-content: space-around;
+    }
+
+    .image {
+        width: 45%; /* Las imágenes ocupan el 45% */
+        margin-bottom: 15px;
+    }
+}
+
+/* Adaptación para pantallas de escritorio y panorámicas */
+@media (min-width: 940px) {
+    .image-container {
+        justify-content: space-between;
+    }
+
+    .image {
+        width: 30%; /* Las imágenes ocupan el 30% */
+    }
+}
+
+/* Adaptación para pantallas grandes */
+@media (min-width: 1025px) {
+    .image-container {
+        justify-content: space-between;
+    }
+
+    .image {
+        width: 30%; /* Las imágenes ocupan el 30% */
+    }
+}
